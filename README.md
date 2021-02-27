@@ -1,4 +1,6 @@
-Waiting's java basic knowledge notes
+### 2021-02-27
+
+- [x] [String 类能不能被继承？为什么？](https://github.com/Jamie-818/Java-Basic-Notes/blob/main/2021-02-27/string.md)
 
 ### 2021-02-26
 
