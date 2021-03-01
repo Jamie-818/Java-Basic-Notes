@@ -8,7 +8,7 @@
 
   1. 线程并发：在多线程并发的场景下。
 
-  2. 传递数据：可以通过通过ThreadLocak在同一个线程，不同组件中传递公共变量。
+  2. 传递数据：可以通过ThreadLocal在同一个线程，不同组件中传递公共变量。
   3. 线程隔离：每个线程的变量都是独立的，不会互相影响。
 
 ## 2. 基本使用
@@ -287,4 +287,4 @@ public class MyDemo {
 
 ## 总结
 
-> ThreadLocal 的实现，实际上是通过当前线程存储了创建的ThreadLocal对象，ThreadLocal存储了ThreadLocalMap,Map里面存储了值实现的，所以每个线程，只能获取到自己创建的ThreadLocal，也就只能获取到当前线程的存储值，达到了内存隔离，及不同组件数据传递不受多线程干扰的目的。
+> ThreadLocal 的实现，实际上是通过当前线程存储了创建的ThreadLocalMap，Map里面的key为ThreadLocal的引用，value为需要共享的值，每个ThreadLocal 对应存储一个值，所以每个线程，只能获取到自己创建的ThreadLocal，也就只能获取到当前线程的存储值，达到了内存隔离，及不同组件数据传递不受多线程干扰的目的。
